@@ -1,16 +1,15 @@
 {
   "pages": [
-    "pages/bookshlf/index",
+    "pages/index/index",
     "pages/scan/index",
-    "pages/my/index",
-    "pages/index/index"
+    "pages/my/index"
   ],
   "window": {
     "navigationBarTitleText": "UU摆书"
   },
   "tabBar": {
     "list": [{
-      "pagePath": "pages/bookshlf/index",
+      "pagePath": "pages/index/index",
       "text": "书架"
     },{
       "pagePath": "pages/scan/index",
