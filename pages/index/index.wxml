@@ -1,1 +1,5 @@
 <view>{{text}}</view>
+
+<view wx:for="{{bookData}}" wx:for-item="item" wx:for-index="id">
+{{id}}: {{item.title}}
+</view>

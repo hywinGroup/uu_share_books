@@ -1,13 +1,28 @@
 'use strict'
-
+import util from "../../utils/util.js";
+import config from "../../config.js";
+/*
+根据isbn获取信息，例如
+https://api.douban.com/v2/book/isbn/9787115411914
+*/
 Page({
   data: {
     text: 'this is index page',
-    array: [{msg: '1'}, {msg: '2'}]
+    bookData: []
   },
   onLoad: function(options) {
-    console.log("run here");
     // Do some initialize when page load.
+    var self = this;
+    let url = config.getBooksList;
+    let successFuc = function(res){
+      console.log("success");
+      //debugger;
+      self.setData({
+        bookData: res.data.data
+      })
+      console.log(res.data.data);
+    };
+    util.doGet(url,successFuc);
   },
   onReady: function() {
     // Do something when page ready.
