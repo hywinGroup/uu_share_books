@@ -4,18 +4,29 @@
     "pages/scan/index",
     "pages/my/index"
   ],
-  "window": {
+  "window": {    
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c81624",
+    "navigationBarTextStyle":"fff",
     "navigationBarTitleText": "UU摆书"
   },
-  "tabBar": {
+  "tabBar": {    
+    "color": "#cccccc",
+    "selectedColor": "#c81624",
     "list": [{
       "pagePath": "pages/index/index",
+      "iconPath": "images/icon_index.png",
+      "selectedIconPath":"images/icon_index.png",
       "text": "书架"
     },{
       "pagePath": "pages/scan/index",
+      "iconPath": "images/icon_scan.png",
+      "selectedIconPath":"images/icon_scan.png",
       "text": "扫码"
     },{
       "pagePath": "pages/my/index",
+      "iconPath": "images/icon_my.png",
+      "selectedIconPath":"images/icon_my.png",
       "text": "我的"
     }]
   },
