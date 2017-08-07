@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/bookshlf/index",
+    "pages/scan/index",
+    "pages/my/index",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "UU摆书"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/bookshlf/index",
+      "text": "书架"
+    },{
+      "pagePath": "pages/scan/index",
+      "text": "扫码"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
