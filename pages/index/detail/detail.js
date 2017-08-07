@@ -1,28 +1,9 @@
-'use strict'
-import util from "../../utils/util.js";
-import config from "../../config.js";
-/*
-根据isbn获取信息，例如
-https://api.douban.com/v2/book/isbn/9787115411914
-*/
 Page({
   data: {
-    text: 'this is index page',
-    bookData: []
+    text: "This is detail page."
   },
   onLoad: function(options) {
     // Do some initialize when page load.
-    var self = this;
-    let url = config.getBooksList;
-    let successFuc = function(res){
-      console.log("success");
-      //debugger;
-      self.setData({
-        bookData: res.data.data
-      })
-      console.log(res.data.data);
-    };
-    util.doGet(url,successFuc);
   },
   onReady: function() {
     // Do something when page ready.
@@ -53,12 +34,6 @@ Page({
     // this.setData({
     //   text: 'Set some data for updating view.'
     // })
-  },
-  goToDetail:function(event){
-      var bookId = event.currentTarget.dataset.id;
-      wx.navigateTo({
-          url: './detail/detail?id='+bookId
-      })
   },
   customData: {
     hi: 'MINA'
