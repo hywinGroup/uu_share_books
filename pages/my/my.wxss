@@ -1,0 +1,80 @@
+.flex {
+  display: flex;
+}
+
+/*l_auto:占用剩下的*/
+.flex_auto {
+  flex: 1;
+}
+
+.swiper-tab{  
+    width: 100%;  
+    text-align: center;  
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #eaeaea; 
+    background: #fafafa;
+}  
+.swiper-tab-list{  
+  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #666666;  
+}   
+.swiper-tab-list.on{
+  color: #c81624;
+  line-height: 80rpx;
+  border-bottom: 5rpx solid #c81624;
+} 
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: scroll; }  
+.swiper-box view{  
+    text-align: left;  
+}
+
+.item {
+    padding: 20rpx 40rpx;
+    background-color: #fff;
+    color: #787878;
+    border-bottom: 1rpx solid #eaeaea; 
+}
+.item_left{
+   margin-top:10rpx; 
+   width: 188rpx;
+   height: 188rpx;
+   overflow: hidden;
+}
+
+.item image {
+    display: block;
+    width: 188rpx;
+    height: 188rpx;
+    border-radius: 50%;
+}
+
+.item_middle {
+    flex: 1;
+    margin-left: 30rpx;
+    padding-top: 5rpx;
+    overflow: hidden;
+    line-height: 44rpx;
+}
+
+.item_middle .title {
+    font-size: 30rpx;
+    color: #333;
+}
+.item_middle .dPrice {
+    font-size: 24rpx;
+    color: #666;
+    margin: 2rpx 0rpx;
+}
+
+.item_middle .OPrice {
+    font-size: 24rpx;
+    color: #666;
+    margin: 2rpx 0rpx;
+}
+.item_middle .desc{
+   font-size: 24rpx;
+   color: #666;
+    margin: 2rpx 0rpx;
+}
