@@ -1,0 +1,43 @@
+.book-header{
+  width:100%;
+  height:340rpx;
+  background: -webkit-radial-gradient(#d39f77, #a46b58, #4d2e36); /* Safari 5.1 - 6.0 */
+  background: -o-radial-gradient(#d39f77, #a46b58, #4d2e36); /* Opera 11.6 - 12.0 */
+  background: -moz-radial-gradient(#d39f77, #a46b58, #4d2e36); /* Firefox 3.6 - 15 */
+  background: radial-gradient(#d39f77, #a46b58, #4d2e36); /* 标准的语法 */
+  display: flex;
+  padding-top:50rpx;
+}
+.detail-items{
+  padding-left:20rpx;
+  padding-top:5rpx;
+  line-height:45rpx; 
+  color:#fffefb;
+  font-size:28rpx;
+}
+.detail-items .title{
+	font-size:32rpx;
+  color:#fffefb;
+}
+.detail-items .average{
+	color:#f9c802;
+}
+.detail-img {
+	width:220rpx;
+	margin-left:30rpx;
+	height:280rpx;
+	border:solid 1px #5c5c5c;
+}
+
+.detail-item{
+  clear:both;
+  margin-top:20rpx;
+  overflow:hidden;
+}
+.detail-item label,.detail-item view{
+  float:left;
+  font-size:32rpx;
+}
+.detail-item label{
+  font-weight: bold;
+}

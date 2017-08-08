@@ -1,0 +1,22 @@
+body{
+	font-size:32rpx;
+}
+.tCenter {
+	text-align:center;
+}
+.tLeft {
+	text-align:left;
+}
+.tRight {
+	text-align:right;
+}
+.content{
+	margin-left:30rpx;
+	margin-right:30rpx;
+}
+.oprate {
+	color:#247ae4;
+}
+.oprate-hover{
+	color:#5695e2;
+}

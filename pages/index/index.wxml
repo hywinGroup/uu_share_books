@@ -9,14 +9,15 @@
 	  </block>
 	</swiper>	
 </view>
-<view >
-	<input type="text" class="search-book"/>
+<view bindtap="goToSearch" class = "search-book">
+	<input type="text" />
+	<label>搜索</label>
 </view>
 
 <view class="books-container">
 	<view wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book">
 		<view bindtap="goToDetail" data-id="{{item.id}}">
-			<image src="{{item.images.small}}" />
+			<image src="{{item.images.small}}"  mode="widthFix"/>
 		</view>
 	</view>
 </view>

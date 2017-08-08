@@ -1,1 +1,23 @@
-<view>详情</view>
+<scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+	<view class="book-header">
+			<image class="detail-img" src="{{book.images.large}}"  />
+      <view class="detail-items">
+        <view class="title">{{book.title}}</view>
+        <view class="average">评分：{{book.rating.average}}</view>
+        <view>{{book.author}}</view>
+        <view>{{book.publisher}}</view>
+        <view>价格：{{book.price}}</view>
+	    	<view>押金：{{book.price}}</view>
+      </view>
+  </view>
+  <view class="content">
+	    <view class="detail-item">
+	    	<label>门店地址：</label>
+	    	<view>莘庄龙之梦绘本馆</view>
+		  </view>
+      <view class="detail-item">
+          <label>图书简介：</label>  	
+          <view >{{book.summary}}</view>
+      </view>
+	</view>
+</scroll-view>

@@ -70,6 +70,9 @@ Page({
           url: '../detail/detail?id='+bookId
       })
   },
+  goToSearch:function(event){
+
+  },
   customData: {
     hi: 'MINA'
   }
