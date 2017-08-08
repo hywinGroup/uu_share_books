@@ -1,0 +1,25 @@
+.slide-image{
+	width:100%;
+	height:100%;
+}
+.index-header{
+	text-align:center;
+}
+.search-book{
+	
+}
+.books-container{
+	display:flex;
+	width:90%;
+	margin-left:5%;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+.books-container .book{
+	width:200rpx;
+	padding-top:10rpx;
+}
+.books-container .book image{
+	width:100%;
+	height:250rpx;
+}

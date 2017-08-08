@@ -8,7 +8,17 @@ https://api.douban.com/v2/book/isbn/9787115411914
 Page({
   data: {
     text: 'this is index page',
-    bookData: []
+    bookData: [],
+    swiperObj:{
+      indicatorDots:true,
+      autoplay:true,
+      interval:5000,
+      duration:500,
+      imgUrls:[
+        "http://upfile2.asqql.com/upfile/hdimg/wmtp/wmtp/2016-11/25/114520VTdwwcG3cd.jpg",
+        "http://upfile2.asqql.com/upfile/hdimg/wmtp/wmtp/2016-5/27/924529lFKzImYF0.jpg"
+      ]
+    }
   },
   onLoad: function(options) {
     // Do some initialize when page load.
@@ -57,7 +67,7 @@ Page({
   goToDetail:function(event){
       var bookId = event.currentTarget.dataset.id;
       wx.navigateTo({
-          url: './detail/detail?id='+bookId
+          url: '../detail/detail?id='+bookId
       })
   },
   customData: {
