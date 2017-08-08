@@ -1,0 +1,5 @@
+<template name="isResult">
+    <view data-id="{{id}}">
+        <image src="{{images.small}}" />
+    </view>
+</template>
