@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/theme/theme",
     "pages/detail/detail",
     "pages/scan/scan",
     "pages/my/my"
@@ -18,7 +19,12 @@
       "pagePath": "pages/index/index",
       "iconPath": "images/icon_index.png",
       "selectedIconPath":"images/icon_index_cur.png",
-      "text": "书架"
+      "text": "首页"
+    },{
+      "pagePath": "pages/theme/theme",
+      "iconPath": "images/icon_theme.png",
+      "selectedIconPath":"images/icon_theme_cur.png",
+      "text": "筛选"
     },{
       "pagePath": "pages/scan/scan",
       "iconPath": "images/icon_scan.png",

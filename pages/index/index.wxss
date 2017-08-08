@@ -6,7 +6,10 @@
 	text-align:center;
 }
 .search-book{
-	
+	border:solid 1px #666666;
+	width:80%;
+	margin-left:10%;
+	margin-top:5rpx;
 }
 .books-container{
 	display:flex;

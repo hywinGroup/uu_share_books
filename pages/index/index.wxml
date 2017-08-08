@@ -2,20 +2,17 @@
 <view>
 	<swiper indicator-dots="{{swiperObj.indicatorDots}}"
 	  autoplay="{{swiperObj.autoplay}}" interval="{{swiperObj.interval}}" duration="{{swiperObj.duration}}">
-	  <block wx:for="{{swiperObj.imgUrls}}">
+	  <block wx:for="{{swiperObj.imgUrls}}" wx:key="*this">
 	    <swiper-item>
 	      <image src="{{item}}" class="slide-image"/>
 	    </swiper-item>
 	  </block>
-	</swiper>
-	<view class="search-book"></view>
+	</swiper>	
+</view>
+<view >
+	<input type="text" class="search-book"/>
 </view>
 
-<view class="index-header">筛选图书</view>
-<view>
-	热门：0-3 冰雪奇缘 
-</view>
-<view style="text-align:right">更多条件</view>
 <view class="books-container">
 	<view wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book">
 		<view bindtap="goToDetail" data-id="{{item.id}}">
