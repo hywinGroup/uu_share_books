@@ -1,6 +1,7 @@
 body{
 	font-size:32rpx;
 }
+
 .tCenter {
 	text-align:center;
 }
@@ -23,28 +24,31 @@ body{
 
 .search-book{
 	position:relative;
-	height:110rpx;
-}
-.search-book input{
+	height:60rpx;
   border:solid 1px #ccc;
+  margin-top: 20rpx;
   width:80%;
-  height:60rpx;
   margin-left:10%;
-  position: absolute;
-  top:25rpx;
   border-radius:10rpx;
+}
+.search-book input,.search-book .copy-input{
+  width:80%;
+  height:100%;
+  left:0;
+  position: absolute;
+  top:0;
   padding-left:10rpx;
   font-size:30rpx;
 }
-.search-book label{
+.search-book .label{
 	position:absolute;
-	top:25rpx;
+	top:0;
 	font-size:32rpx;
-	right:10%;
+	right:0;
 	color:#666;
-	height:60rpx;
+	height:100%;
 	line-height:60rpx;
-	width:100rpx;
+	width:20%;
 	text-align:center;
 }
 

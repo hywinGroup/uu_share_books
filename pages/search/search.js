@@ -12,6 +12,7 @@ Page({
   searchBooks:function(){
     //var searchKey = document.getElementById("searchKey").value;
     var self = this;
+    //alert("run here");
     //console.log("searchKey:"+self.data.searchKey);
     let successFuc = function(res){
       self.setData({

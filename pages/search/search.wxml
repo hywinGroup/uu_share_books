@@ -3,7 +3,7 @@
 	<view class="search-oprate"  wx:if="{{!isSearched}}">
 		<view class = "search-book">
 			<input type="text" id="searchKey" name="searchkey" bindconfirm="searchBooks" confirm-type="search" bindinput="getInputValue"/>
-			<label bindtap="searchBooks">搜索</label>
+			<view class="label" bindtap="searchBooks">搜索</view>
 		</view>
     <view class="hot-block">
       <label class="hot-title">热门搜索</label>

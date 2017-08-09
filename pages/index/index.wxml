@@ -10,8 +10,8 @@
 	</swiper>	
 </view>
 <view bindtap="goToSearch" class = "search-book">
-	<input type="text" />
-	<label>搜索</label>
+  <view class="copy-input"></view>
+  <view class="label" bindtap="searchBooks">搜索</view>
 </view>
 
 <view class="books-container">
