@@ -17,7 +17,7 @@
 <view class="books-container">
 	<view wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book">
 		<view bindtap="goToDetail" data-id="{{item.id}}">
-			<image src="{{item.images.small}}"  mode="widthFix"/>
+			<image src="{{item.images.small}}" />
 		</view>
 	</view>
 </view>

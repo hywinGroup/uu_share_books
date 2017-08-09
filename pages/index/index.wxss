@@ -5,28 +5,7 @@
 .index-header{
 	text-align:center;
 }
-.search-book{
-	position:relative;
-	height:110rpx;
-}
-.search-book input{
-	border:solid 1px #ccc;
-	width:80%;
-  height:60rpx;
-	margin-left:10%;
-  position: absolute;
-  top:25rpx;
-  border-radius:10rpx;
-  padding-left:10rpx;
-}
-.search-book label{
-  position: absolute;
-  top:40rpx;
-  font-size:32rpx;
-  right:10%;
-  padding-right:10rpx;
-  color:#666;
-}
+
 .books-container{
 	display:flex;
 	width:90%;
@@ -40,4 +19,5 @@
 }
 .books-container .book image{
 	width:100%;
+	height:260rpx;
 }

@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/theme/theme",
+    "pages/search/search",
     "pages/detail/detail",
     "pages/scan/scan",
     "pages/my/my"

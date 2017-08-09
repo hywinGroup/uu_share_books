@@ -71,7 +71,9 @@ Page({
       })
   },
   goToSearch:function(event){
-
+      wx.navigateTo({
+          url: '../search/search'
+      })
   },
   customData: {
     hi: 'MINA'
