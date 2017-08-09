@@ -7,7 +7,7 @@
     margin-top: 40rpx;
     margin-bottom: 20rpx;
     font-size: 30rpx;
-    border-left: 10rpx solid #47a86c;
+    border-left: 10rpx solid #c81624;
 }
 
 .search-keyword-item {
@@ -26,4 +26,24 @@
 .searchList .search-keyword-item{
   margin: 0 20rpx 10rpx 0;
    padding: 10rpx 20rpx;
+}
+
+.search-result{
+	display:flex;
+	width:90%;
+	margin-left:5%;
+	flex-wrap:wrap;
+	justify-content: space-betwee;
+}
+
+.search-result .book{
+	width:200rpx;
+  height:300rpx;
+  overflow: hidden;
+	padding-top:10rpx;
+  margin:13rpx;
+  
+}
+.search-result .book image{
+	width:100%;
 }

@@ -4,7 +4,7 @@ import config from "../../config.js";
 Page({
   data: {
     text: "This is theme page.",
-    bookData:[],
+    items:[],
     searchType: 'keyword',
     hotKeyword: ['0-3岁', '权志郎', '冰雪奇缘'],
     ageKeyword: ['0-2岁', '3-6岁', '7-9岁', '9岁以上'],
@@ -17,7 +17,7 @@ Page({
     let successFuc = function (res) {
       console.log("success");
       self.setData({
-        bookData: res.data.data
+        items: res.data.data
       })
       console.log(res.data.data);
     };

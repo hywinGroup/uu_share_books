@@ -14,6 +14,9 @@
         <view wx:for="{{themeTag}}" wx:for-item="themeTagItem" wx:key="themeTagItem" class="search-keyword-item" data-keyword="{{themeTagItem}}" bindtap="searchByTag">{{themeTagItem}}</view>        
     </view>
 </view>
-
-<import src="../../component/result/result.wxml"/>
-<template is="isResult" data="{{...bookData}}"/>
+<view class="search-result">
+  <import src="../../component/result/result.wxml"/>
+  <view class="book" wx:for-items="{{items}}">
+    <template is="isResult" data="{{...item}}"/>
+  </view>
+</view>
