@@ -5,6 +5,7 @@
     "pages/search/search",
     "pages/detail/detail",
     "pages/scan/scan",
+    "pages/order/order",
     "pages/my/my"
   ],
   "window": {    

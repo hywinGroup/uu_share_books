@@ -1,6 +1,4 @@
 'use strict'
-import util from "../../utils/util.js";
-import config from "../../config.js";
 
 Page({
   data: {
@@ -18,10 +16,15 @@ Page({
       onlyFromCamera: true,
       success: (res) => {
         //console.log(res)
-        wx.showToast({
-          title: res.result,
-          icon: 'success',
-          duration: 0
+        // wx.showToast({
+        //   title: res.result,
+        //   icon: 'success',
+        //   duration: 0
+        // })
+        //跳转至订单
+        var bookIsbn = res.result;
+        wx.navigateTo({
+            url: '../order/order?isbn='+bookIsbn
         })
       },
       fail: (res) =>{
