@@ -1,16 +1,33 @@
 
 <scroll-view scroll-y>
-	<view class="search-oprate">
+	<view class="search-oprate"  wx:if="{{!isSearched}}">
 		<view class = "search-book">
 			<input type="text" id="searchKey" name="searchkey" bindconfirm="searchBooks" confirm-type="search" bindinput="getInputValue"/>
 			<label bindtap="searchBooks">搜索</label>
 		</view>
+    <view class="hot-block">
+      <label class="hot-title">热门搜索</label>
+      <view class="hot-search">
+        <view>0-3</view>
+        <view>小猪佩奇</view>
+        <view>奇幻森林</view>
+        <view>权志郎</view>
+        <view>安徒生</view>
+      </view>
+    </view>
 	</view>
-	<view class="search-result">
-		<view>
-			<view></view>
-			<view></view>
+	<view class="search-result" wx:if="{{isSearched}}">
+		<view bindtap="goToDetail" wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book-item" data-id="{{item.id}}">
+			<view class="title-page"><image src="{{item.images.small}}" /></view>
+			<view class="book-des">
+				<view class="title">{{item.title}}</view>
+				<view>{{item.author}}</view>
+				<view>{{item.publisher}}</view>
+				<view>{{item.price}}</view>
+			</view>
 		</view>
 	</view>
 
 </scroll-view>
+
+

@@ -1,0 +1,38 @@
+.book-item {
+	width:100%;
+	display:flex;
+  border-bottom:solid 1px #ccc;
+  padding:30rpx;
+}
+.book-item .title-page{
+
+}
+.book-item .title-page image{
+  width:150rpx;
+  height:180rpx;
+}
+.book-des view{
+	font-size:28rpx;
+  margin-top:10rpx;
+  padding-left:20rpx;
+}
+.book-des view.title{
+	font-size:36rpx;	
+}
+.hot-block{
+  padding:0 30rpx;
+}
+.hot-title{
+  font-size:30rpx;
+}
+.hot-search{
+  display: flex;
+  margin-top:20rpx;
+}
+.hot-search view{
+  padding:6rpx;
+  background-color:#ccc;
+  border-radius: 6rpx;
+  font-size:24rpx;
+  margin:0 20rpx;
+}
