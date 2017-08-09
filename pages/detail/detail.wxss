@@ -13,7 +13,7 @@
   padding-top:5rpx;
   line-height:45rpx; 
   color:#fffefb;
-  font-size:28rpx;
+  font-size:26rpx;
 }
 .detail-items .title{
 	font-size:32rpx;

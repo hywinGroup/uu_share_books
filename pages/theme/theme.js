@@ -29,6 +29,13 @@ Page({
       text: 'Set some data for updating view.'
     })
   },
+  goToDetail:function(event){
+      var bookId = event.currentTarget.dataset.id;
+      console.log("book id:"+bookId);
+      wx.navigateTo({
+          url: '../detail/detail?id='+bookId
+      })
+  },
   customData: {
     hi: 'MINA'
   }

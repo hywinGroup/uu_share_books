@@ -15,10 +15,9 @@
 </view>
 
 <view class="books-container">
-	<view wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book">
-		<view bindtap="goToDetail" data-id="{{item.id}}">
-			<image src="{{item.images.small}}" />
-		</view>
+	<view wx:for="{{bookData}}" wx:for-item="item"  wx:key="*this" class="book" bindtap="goToDetail" data-id="{{item.id}}">
+		<import src="../../component/result/result.wxml"/>
+		<template is="isResult" data="{{...item}}"/>
 	</view>
 </view>
 
