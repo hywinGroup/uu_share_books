@@ -17,7 +17,21 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
-        console.log(res)
+        //console.log(res)
+        wx.showToast({
+          title: res.result,
+          icon: 'success',
+          duration: 0
+        })
+      },
+      fail: (res) =>{
+        wx.showToast({
+          title: "失败"+res,
+          icon: 'success',
+          duration: 0
+        })
+      },
+      complete: (res) => {
       }
     })
   },
