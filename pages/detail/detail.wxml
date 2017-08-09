@@ -1,4 +1,4 @@
-<scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+<scroll-view scroll-y  >
 	<view class="book-header">
 			<image class="detail-img" src="{{book.images.large}}"  />
       <view class="detail-items">

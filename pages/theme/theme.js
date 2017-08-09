@@ -21,7 +21,8 @@ Page({
       })
       console.log(res.data.data);
     };
-    util.doGet(url, successFuc);
+    //util.doGet(url, successFuc);
+    util.doPost(url,{},successFuc);
   },
   viewTap: function() {
     this.setData({

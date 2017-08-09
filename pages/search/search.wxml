@@ -1,4 +1,16 @@
-<view class = "search-book">
-	<input type="text" id="searchKey" name="searchkey" bindconfirm="searchBooks" confirm-type="search" bindinput="getInputValue"/>
-	<label bindtap="searchBooks">搜索</label>
-</view>
+
+<scroll-view scroll-y>
+	<view class="search-oprate">
+		<view class = "search-book">
+			<input type="text" id="searchKey" name="searchkey" bindconfirm="searchBooks" confirm-type="search" bindinput="getInputValue"/>
+			<label bindtap="searchBooks">搜索</label>
+		</view>
+	</view>
+	<view class="search-result">
+		<view>
+			<view></view>
+			<view></view>
+		</view>
+	</view>
+
+</scroll-view>

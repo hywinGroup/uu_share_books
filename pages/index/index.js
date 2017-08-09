@@ -25,14 +25,14 @@ Page({
     var self = this;
     let url = config.getBooksList;
     let successFuc = function(res){
-      console.log("success");
+      //console.log("success");
       //debugger;
       self.setData({
         bookData: res.data.data
       })
       console.log(res.data.data);
     };
-    util.doGet(url,successFuc);
+    util.doPost(url,{},successFuc);
   },
   onReady: function() {
     // Do something when page ready.
