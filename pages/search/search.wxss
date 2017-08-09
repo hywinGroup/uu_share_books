@@ -30,7 +30,7 @@
   margin-top:20rpx;
 }
 .hot-search view{
-  padding:6rpx;
+  padding:6rpx 10rpx;
   background-color:#ccc;
   border-radius: 6rpx;
   font-size:24rpx;

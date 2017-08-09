@@ -1,3 +1,3 @@
 <view class="container">
-{{text}}
+	<button bindtap="scanCode" class="scan-btn" hover-class="scan-btn-hover">扫一扫</button>
 </view>
