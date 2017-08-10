@@ -1,6 +1,8 @@
 'use strict'
 import util from "../../utils/util.js";
 import config from "../../config.js";
+import { $wuxDialog } from '../../component/wux'
+
 /*
 根据isbn获取信息，例如
 https://api.douban.com/v2/book/isbn/9787115411914
@@ -33,6 +35,19 @@ Page({
       console.log(res.data.data);
     };
     util.doPost(url,{},successFuc);
+  },
+  onModal: function(){
+    var self = this;
+    $wuxDialog.confirm({
+      title: 'title',
+      content: 'content',
+      onConfirm(e) {
+        console.log('what!')
+      },
+      onCancel(e) {
+        console.log('why?')
+      },
+    })
   },
   goToDetail:function(event){
       var bookId = event.currentTarget.dataset.id;
