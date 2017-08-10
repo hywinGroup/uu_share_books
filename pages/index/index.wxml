@@ -22,11 +22,9 @@
 </view>
 </scroll-view>
 
-<view class="" bindtap="onModal">打开弹窗</view>
 <view class="" bindtap="bindLoad">Loading</view>
- 
-<import src="../../component/dialog/dialog.wxml"/>
-<template is="dialog" data="{{ ...$wux.dialog }}"/>
+<view>{{url.latitude}}</view>
+
 
 <import src="../../component/loading/loading.wxml"/>
 <template is="loading" data="{{ ...$wux.loading }}"/>

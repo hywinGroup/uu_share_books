@@ -1,7 +1,6 @@
 'use strict'
 import util from "../../utils/util.js";
 import config from "../../config.js";
-import { $wuxDialog } from '../../component/wux';
 import { $wuxLoading } from '../../component/wux'
 
 /*
@@ -21,33 +20,68 @@ Page({
         "http://upfile2.asqql.com/upfile/hdimg/wmtp/wmtp/2016-11/25/114520VTdwwcG3cd.jpg",
         "http://upfile2.asqql.com/upfile/hdimg/wmtp/wmtp/2016-5/27/924529lFKzImYF0.jpg"
       ]
-    }
+    },
+    url:{}
   },
   onLoad: function(options) {
     // Do some initialize when page load.
-    var self = this;
-    let url = config.getBooksList;
-    let successFuc = function(res){
-      //console.log("success");
-      //debugger;
-      self.setData({
-        bookData: res.data.data
+      var self = this;
+      wx.getSetting({
+          success(res) {
+              if (!res.authSetting['scope.userLocation']) {
+                //授权
+                console.log("no");
+                self.authSet();
+              }else{
+                console.log("yes");
+                self.getLocation();
+              }
+          }
       })
-      console.log(res.data.data);
-    };
-    util.doPost(url,{},successFuc);
   },
-  onModal: function(){
-    $wuxDialog.confirm({
-      title: 'title',
-      content: 'content',
-      onConfirm(e) {
-        console.log('what!')
-      },
-      onCancel(e) {
-        console.log('why?')
-      },
-    })
+  onReady: function() {
+  },
+  authSet:function(){
+      var self = this;
+      console.log("***********authorize");
+      wx.authorize({
+          scope: 'scope.userLocation',
+          success() {
+            console.log("authorize   success");
+            self.getLocation();
+          }
+      })
+  },
+  getLocation:function(){
+      var self = this;
+      console.log("*********getLocation*****");
+      wx.getLocation({
+          type: 'gcj02',
+          success: function(res) {
+              console.log("success");
+              var latitude = res.latitude
+              var longitude = res.longitude
+              var speed = res.speed
+              var accuracy = res.accuracy
+              self.setData({
+                  url : res
+              });
+              self.getBooks(res)
+          }
+      })
+  },
+  getBooks:function (urlObj) {
+    console.log("******getBooks*******");
+      var obj = Object.assign({},urlObj),self = this,url = config.getBooksList;
+      var successFuc = function(res){
+          self.setData({
+              bookData: res.data.data
+          })
+      };
+      util.doPost(url,{
+          latitude:obj.latitude,
+          longitude:obj.longitude
+      },successFuc);
   },
   bindLoad: function(){
     $wuxLoading.show({

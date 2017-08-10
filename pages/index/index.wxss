@@ -8,3 +8,20 @@
 .books-container{
   margin-top:20rpx;
 }
+/*
+.weui-dialog{
+  border-radius: 20rpx;
+}
+.weui-dialog__content{
+    font-size:36rpx;
+    color:#000;
+    font-weight: bold;
+}
+.weui-dialog__bd:first-child{
+  padding:40rpx 30rpx;
+}
+.weui-dialog__btn_default {
+    font-weight: bold;
+    font-size:34rpx;
+}
+*/
