@@ -1,0 +1,31 @@
+.oprate-block{
+	width:80%;
+	margin-top:50rpx;
+  margin-left:10%;
+}
+.order-header{
+  margin:30rpx;
+  padding:4rpx;
+  border:solid 1px #ccc;
+}
+.order-header image{
+  width:100%;
+  max-height: 500rpx;
+}
+.order-info{
+  margin:0 30rpx;
+}
+.order-info view{
+  margin-top:20rpx;
+  font-size:28rpx;
+}
+.order-info view.title{
+	font-weight:bold;
+	font-size:32rpx;
+}
+.tip{
+  font-size:24rpx;
+  color:#5c5c5c;
+  text-align: center;
+  margin-top:40rpx;
+}

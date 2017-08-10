@@ -68,3 +68,24 @@ body{
 	width:100%;
 	height:100%;
 }
+
+.btn-primary{
+	width:100%;
+	height:80rpx;
+	line-height:80rpx;
+	background: -webkit-linear-gradient(#fa9513, #f9a63b,#fa9513); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#fa9513, #f9a63b,#fa9513); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#fa9513, #f9a63b,#fa9513); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#fa9513, #f9a63b,#fa9513); /* 标准的语法 */
+	color:#fff;
+	font-size:30rpx;
+	letter-spacing: 4rpx;
+	border: none;
+	display: block;
+}
+.btn-primary-hover{
+	background: -webkit-linear-gradient(#f89e2a, #f8af52,#f89e2a); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#f89e2a, #f8af52,#f89e2a); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#f89e2a, #f8af52,#f89e2a); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#f89e2a, #f8af52,#f89e2a); /* 标准的语法 */
+}

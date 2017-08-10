@@ -4,13 +4,19 @@ import config from "../../config.js";
 
 Page({
   data: {
-    text: "This is order data."
+    text: "This is order data.",
+    book:{}
   },
   onLoad: function(option) {
     // Do some initialize when page load.
-    console.log("detail*************"+option.isbn);
-    this.setData({
-      text:"书的isbn号："+option.isbn
+    var self = this;
+    let url = config.getBookDetail;
+    util.doPost(url,{
+      isbn:option.isbn?option.isbn:""
+    },function(res){
+      self.setData({
+        book: res.data.data
+      })
     });
   },
   onReady: function() {

@@ -1,3 +1,16 @@
 <view>
-{{text}}
+	<view class="order-header">
+		<image src="{{book.images.large}}" mode="widthFix" />
+	</view>
+	<view class="order-info">
+		<view class="title">{{book.title}}</view>
+		<view>作者：{{book.author}}</view>
+		<view>出版社：{{book.publisher}}</view>
+		<view>押  金：{{book.price}}</view>
+		<view>每日价格：0.5 元</view>
+	</view>
+	<view class="oprate-block">
+		<button bindtap="" class="btn-primary" hover-class="btn-primary-hover">付押金</button>
+	</view>
+  <view class="tip">租借金额累计超过押金时，您可以不归还本书</view>
 </view>
