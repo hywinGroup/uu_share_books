@@ -23,19 +23,10 @@
 </scroll-view>
 
 <view class="" bindtap="onModal">打开弹窗</view>
-<!--
-<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
-<view class="modal-dialog" wx:if="{{showModal}}">
-  <view class="modal-title">title</view>
-  <view class="modal-content">
-    <p>content</p>
-  </view>
-  <view class="modal-footer">
-    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
-  </view>
-</view>
--->
+<view class="" bindtap="bindLoad">Loading</view>
  
 <import src="../../component/dialog/dialog.wxml"/>
 <template is="dialog" data="{{ ...$wux.dialog }}"/>
+
+<import src="../../component/loading/loading.wxml"/>
+<template is="loading" data="{{ ...$wux.loading }}"/>

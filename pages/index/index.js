@@ -1,7 +1,8 @@
 'use strict'
 import util from "../../utils/util.js";
 import config from "../../config.js";
-import { $wuxDialog } from '../../component/wux'
+import { $wuxDialog } from '../../component/wux';
+import { $wuxLoading } from '../../component/wux'
 
 /*
 根据isbn获取信息，例如
@@ -37,7 +38,6 @@ Page({
     util.doPost(url,{},successFuc);
   },
   onModal: function(){
-    var self = this;
     $wuxDialog.confirm({
       title: 'title',
       content: 'content',
@@ -48,6 +48,15 @@ Page({
         console.log('why?')
       },
     })
+  },
+  bindLoad: function(){
+    $wuxLoading.show({
+      text: '数据加载中',
+    })
+
+    setTimeout(() => {
+      $wuxLoading.hide()
+    }, 1500)
   },
   goToDetail:function(event){
       var bookId = event.currentTarget.dataset.id;
