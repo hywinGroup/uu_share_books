@@ -36,7 +36,18 @@
 }
 .detail-item label,.detail-item view{
   float:left;
-  font-size:32rpx;
+  font-size:30rpx;
+  line-height:40rpx;
+}
+.url-list view{
+   clear:both;
+   line-height:40rpx;
+}
+.icon-dibiao-detail{
+  color:#f9c802;
+  font-size:36rpx;
+  top:2px;
+  position:relative;
 }
 .detail-item label{
   font-weight: bold;

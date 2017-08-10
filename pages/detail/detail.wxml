@@ -13,7 +13,10 @@
   <view class="content">
 	    <view class="detail-item">
 	    	<label>门店地址：</label>
-	    	<view>莘庄龙之梦绘本馆</view>
+        <view class="url-list">
+  	    	<view bindtap="toToMap" wx:for="{{urlList}}" wx:for-item="item"  wx:key="*this" data-id="{{item.id}}">莘庄龙之梦绘本馆<i class="iconfont icon-dibiao icon-dibiao-detail"></i>
+          </view>
+        </view>
 		  </view>
       <view class="detail-item">
           <label>图书简介：</label>  	
