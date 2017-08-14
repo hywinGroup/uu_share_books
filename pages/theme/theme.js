@@ -24,6 +24,9 @@ Page({
     //util.doGet(url, successFuc);
     util.doPost(url,{},successFuc);
   },
+  searchByKeyword: function(){
+
+  },
   viewTap: function() {
     this.setData({
       text: 'Set some data for updating view.'

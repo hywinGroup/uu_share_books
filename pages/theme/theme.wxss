@@ -11,14 +11,29 @@
 }
 
 .search-keyword-item {
+    position: relative;
     display: inline-block;
-    padding: 10rpx;
+    padding: 10rpx 20rpx;
     border: 1px solid #ccc;
     border-radius: 10rpx;
     background-color: #fbfbfb;
     margin: 0 10rpx 10rpx 0;
     color: #555;
     font-size: 24rpx;
+}
+.search-keyword-item > i{
+  position: absolute;
+  bottom: -1rpx;
+  right: -1rpx;
+}
+.search-keyword-item.active{
+  border: 1px solid #c81624;
+}
+.search-keyword-item.active > i{
+  color: #c81624;
+}
+.active::after{
+  content: '';
 }
 .searchList{
   text-align: center;
