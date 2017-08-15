@@ -22,15 +22,20 @@
     font-size: 24rpx;
 }
 .search-keyword-item > i{
+  display: none;
   position: absolute;
   bottom: -1rpx;
   right: -1rpx;
 }
-.search-keyword-item.active{
+.search-keyword-item.selected{
   border: 1px solid #c81624;
 }
-.search-keyword-item.active > i{
+.search-keyword-item.selected > i{
   color: #c81624;
+  display: block
+}
+.normal{
+
 }
 .active::after{
   content: '';

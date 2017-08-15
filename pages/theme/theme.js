@@ -4,12 +4,21 @@ import config from "../../config.js";
 Page({
   data: {
     text: "This is theme page.",
-    items:[],
     searchType: 'keyword',
     hotKeyword: ['0-3岁', '权志郎', '冰雪奇缘'],
-    ageKeyword: ['0-2岁', '3-6岁', '7-9岁', '9岁以上'],
-    langKeyword: ['中文', '英文',],
-    themeTag: ['交通工具', '情绪管理', '友情', '亲情', '入园', '性教育', '无字书', '音乐', '古诗词', '儿歌', '建筑', '幽默', '科普'],
+    searchItems:[{
+      'title': '年龄',
+      'currentItem': 0,
+      'Arr': ['0-2岁', '3-6岁', '7-9岁', '9岁以上']
+    },{
+      'title':'语种',
+      'currentItem': 0,
+      'Arr': ['中文', '英文']
+    },{
+      'title':'主题',
+      'currentItem': 0,
+      'Arr': ['交通工具', '情绪管理', '友情', '亲情', '入园', '性教育', '无字书', '音乐', '古诗词', '儿歌', '建筑', '幽默', '科普'],
+    }]
   },
   onLoad: function(options) {
     var self = this;
@@ -21,11 +30,16 @@ Page({
       })
       console.log(res.data.data);
     };
-    //util.doGet(url, successFuc);
     util.doPost(url,{},successFuc);
   },
-  searchByKeyword: function(){
-
+  handleToggle: function(e){
+    var that = this;
+    var id = e.currentTarget.dataset.id;
+    var parentId = e.target.id;
+    //设置当前样式
+    that.setData({
+      'currentItem':id
+    })
   },
   viewTap: function() {
     this.setData({

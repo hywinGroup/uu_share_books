@@ -1,17 +1,19 @@
 <view class="search-hd">
     <view class="search-keyword">
         <view class="searchList">
-          <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">{{hotKeywordItem}}<i class="iconfont icon-xuanzhong"></i></view>
+          <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="handleToggle">{{hotKeywordItem}}<i class="iconfont icon-xuanzhong"></i></view>
         </view>
 
-        <view class="search-keyword-title">年龄</view>
-        <view wx:for="{{ageKeyword}}" wx:for-item="ageKeywordItem" wx:key="ageKeywordItem" class="search-keyword-item" data-keyword="{{ageKeywordItem}}" bindtap="searchByKeyword">{{ageKeywordItem}}<i class="iconfont icon-xuanzhong"></i></view>
-        
-        <view class="search-keyword-title">语种</view>
-        <view wx:for="{{langKeyword}}" wx:for-item="langKeywordItem" wx:key="langKeywordItem" class="search-keyword-item active" data-keyword="{{langKeywordItem}}" bindtap="searchByKeyword">{{langKeywordItem}}<i class="iconfont icon-xuanzhong"></i></view>
-        
-        <view class="search-keyword-title">主题</view>
-        <view wx:for="{{themeTag}}" wx:for-item="themeTagItem" wx:key="themeTagItem" class="search-keyword-item" data-keyword="{{themeTagItem}}" bindtap="searchByTag">{{themeTagItem}}</view>        
+        <view class="content">
+            <block wx:for-items="{{searchItems}}" >
+              <view data-parentId ="{{index}}">
+                <view class="search-keyword-title">{{item.title}}</view>
+                <view class="search-keyword-item {{item.currentItem == index?'selected':'normal'}}" wx:for="{{item.Arr}}" wx:for-item="childItem" bindtap="handleToggle" data-id ="{{index}}">  
+                  {{childItem}}<i class="iconfont icon-xuanzhong"></i>
+                </view>
+              </view>
+            </block>
+        </view>       
     </view>
 </view>
 <view class="books-container">
